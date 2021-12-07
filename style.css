@@ -1,0 +1,188 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 60%;
+  height: 100vh;
+  margin: 0px auto;
+  font-family: poppins;
+}
+body header {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
+}
+body header .title, body header .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+body header .title h3 {
+  font-size: 36px;
+}
+body header .content h5 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+body header .content p {
+  font-size: 14px;
+}
+body main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 50px 1fr 50px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
+  row-gap: 70px;
+  padding: 50px 0px;
+}
+body main .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+body main .profile figure {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+body main .profile figure img {
+  width: 80%;
+}
+body main .profile figure figcaption {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 12px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+body main .profile figure::after {
+  content: attr(data-value);
+  width: 100%;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 12px;
+  right: -92%;
+}
+body main .profile:nth-child(2) {
+  margin-top: 70px;
+}
+body main .profile:nth-child(4) {
+  margin-top: -70px;
+}
+body main .profile:nth-child(6) {
+  margin-top: -70px;
+}
+body footer {
+  height: 5%;
+  color: #BDBDBD;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+}
+body footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (max-width: 1440px) {
+  body {
+    width: 70%;
+  }
+  body main {
+    -webkit-column-gap: 50px;
+       -moz-column-gap: 50px;
+            column-gap: 50px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body {
+    width: 80%;
+  }
+  body main {
+    -webkit-column-gap: 35px;
+       -moz-column-gap: 35px;
+            column-gap: 35px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    width: 90%;
+  }
+  body main {
+    -webkit-column-gap: 25px;
+       -moz-column-gap: 25px;
+            column-gap: 25px;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    width: 90%;
+    height: auto;
+    margin: 50px auto 10px;
+  }
+  body header {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    row-gap: 20px;
+  }
+  body header .title {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  body header .title h3 {
+    font-size: 30px;
+  }
+  body main {
+    -ms-grid-columns: 1fr 0px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 0px;
+       -moz-column-gap: 0px;
+            column-gap: 0px;
+    row-gap: 0px;
+  }
+  body main .profile:nth-child(2), body main .profile:nth-child(4), body main .profile:nth-child(6) {
+    margin-top: 50px;
+  }
+  body main .profile:nth-child(3), body main .profile:nth-child(5) {
+    margin-top: 0px;
+  }
+}
